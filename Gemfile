@@ -98,3 +98,8 @@ gem 'simple_form'
 gem 'mailjet'
 # Font Awesome git 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
+#Configurating Action Mailer with Letter_Opener
+gem 'letter_opener'
+
+

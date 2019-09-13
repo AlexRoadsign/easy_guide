@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
     has_many :bookings
     has_many :visits, through: :bookings
+    after_create :welcome_send
+
+
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
+  
 end
