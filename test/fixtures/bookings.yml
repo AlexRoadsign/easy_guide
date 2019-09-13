@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2019-09-13 16:25:15
+  end_date: 2019-09-13 16:25:15
+  user: one
+  visit: one
+
+two:
+  start_date: 2019-09-13 16:25:15
+  end_date: 2019-09-13 16:25:15
+  user: two
+  visit: two

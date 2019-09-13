@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_13_135156) do
+ActiveRecord::Schema.define(version: 2019_09_13_142515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.bigint "user_id"
+    t.bigint "visit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["visit_id"], name: "index_bookings_on_visit_id"
+  end
 
   create_table "guides", force: :cascade do |t|
     t.string "first_name"
@@ -43,4 +54,23 @@ ActiveRecord::Schema.define(version: 2019_09_13_135156) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "visits", force: :cascade do |t|
+    t.string "tiltle"
+    t.string "city"
+    t.string "profile_picture"
+    t.text "description"
+    t.float "duration"
+    t.float "cost"
+    t.string "category"
+    t.string "accessibility"
+    t.string "location"
+    t.bigint "guide_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guide_id"], name: "index_visits_on_guide_id"
+  end
+
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "visits"
+  add_foreign_key "visits", "guides"
 end
