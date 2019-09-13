@@ -96,5 +96,5 @@ gem 'simple_form'
 
 # Send emails with Mailjet
 gem 'mailjet'
-# Font Awesome 
+# Font Awesome git 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'

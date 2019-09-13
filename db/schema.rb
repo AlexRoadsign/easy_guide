@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2019_09_13_142515) do
   end
 
   create_table "visits", force: :cascade do |t|
-    t.string "tiltle"
+    t.string "title"
     t.string "city"
     t.string "profile_picture"
     t.text "description"

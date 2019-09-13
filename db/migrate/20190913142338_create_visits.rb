@@ -1,7 +1,7 @@
 class CreateVisits < ActiveRecord::Migration[5.2]
   def change
     create_table :visits do |t|
-      t.string :tiltle
+      t.string :title
       t.string :city
       t.string :profile_picture
       t.text :description
